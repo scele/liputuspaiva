@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Liputus paiva</title>
+  <meta http-equiv="content-language" content="fi" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Liputuspäivä" />
+  <meta name="MSSmartTagsPreventParsing" content="true" />
+  <meta http-equiv="imagetoolbar" content="false" />
+  <link rel="Shortcut Icon" type="image/x-icon" href="favicon.ico" />
+  <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+  <style>
+    html { height: 100%; overflow: hidden; }
+    body { text-align: center; height: 100%; }
+    body > div { position: relative; top: 30%; }
+    h1 { font-family: 'Nunito', serif; font-size: 200%; }
+  </style>
+</head>
+<body class="fi">
+<div>
+  <h1>Tanan <span id="onko">?</span> liputus paiva :D</h1>
+</div><!-- /top -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.0/lodash.min.js"></script>
+<script>
+  var d = moment().format("D.M.");
+  var paivat = [
+    '5.2.',
+    '28.2.',
+    '19.3.',
+    '9.4.',
+    '27.4.',
+    '1.5.',
+    '9.5.',
+    '10.5.',
+    '12.5.',
+    '17.5.',
+    '4.6.',
+    '20.6.',
+    '6.7.',
+    '10.10.',
+    '24.10.',
+    '6.11.',
+    '8.11.',
+    '6.12.',
+    '8.12.',
+  ];
+  var onko = _(paivat).contains(d);
+  document.getElementById("onko").innerHTML = onko ? "on" : "ei ole";
+</script>
+</body>
+</html>
+
